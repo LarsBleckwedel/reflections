@@ -1,0 +1,10 @@
+ao inciar um repositório não se encontra nada dentro a princípio
+para criar um novo repositório basta usar a função "git init" para criar um arquivo fechado .git
+quando você usar a função "git status" você verá todos os commits dentro do seu novo repositório
+você precisa fazer isso para criar um projeto novo
+
+a função "git status" permite a você um olhar panorâmico sobre a sua área de preparação e do seu diretório de trabalho
+simplificando, ele permite a você visualizar os arquivos existentes no repositório e quais estão em um andamento de receber um commit
+você seleciona um arquivo para receber um commit com a função "git add" seguido do arquivo que receberá a mudança
+é importante portanto se ter uma área de preparação caso você queira colocar dois arquivos para receber uma mudança ao mesmo tempo
+ou para voltar atrás na operação digitando "git reset"
