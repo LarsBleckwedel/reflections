@@ -1,0 +1,27 @@
+fc ou diff : compara dois arquivos mostrando as diferênças entre os dois
+como operar = fc arquivo_1.(tipo) arquivo_2.(tipo) \ diff arquivo_1.(tipo) arquivo_2.(tipo)
+para windows = ele mostra as duas versões uma seguida da outra com sua(s) respectiva(s) linha(s) de mudança
+para linux = ele mostra uma arquivo como - na frente da linha e o outro como +, respectivamente o que foi removido e o que foi acrescentado
+
+a comparação de arquivos antigos a novos beneficia o programador na hora de tomar medidas no futuro
+questões como o que alterar e porque são fundamentais e as vezes colocar-se uns paços para traz e ver o que deu frutos é melhor do que
+apenas continuar em um rumo sem sentido
+
+em questões de commits e quando formalos e sempre uma boa ideia você fazelos manualmente
+partindo da ideia de voce ter o controle de quando formar seus pontos de salvamento e não deixalos a merce de um outro programa
+quando você mesmo o faz parte-se da ideia de que o usuário tem a noção maior de quando e bom ter pontos para serem comparados no futuro
+
+sobre essa questão em específico: "e eu sei lá porra!"
+agora sobre o quão prático é poder trabalhar com o salvamento conjunto dos arquivos é muito mais vantajoso que ter que alterar cada um separadamente
+isso pensando no controle de versões, portanto podendo ver qual arquivo foi mexido e quais as razões por traz disso
+
+dentro de arquivos git você pode usar várias funções, como "log e diff"
+você usa a função "log" para verificar todas as versões já feitas de commits desse git
+a função "diff" compara duas commits mostrandos suas diferenças de uma versão para a outra
+
+tendo o controle de poder voltar a versões mais antigas do meu trabalho com a função "git checkout" eu tenho mais possibilidade de achar erros
+esta função faz com que você possa voltar alguns commits atraz no seu projeto para versões anteriores
+dentro destas versões você pode testar para encontrar erros dentro do projeto rodando os programas com as versões antigas
+fora isso tambem temos a função "git clone" para clonar/copiar todo um repositorio para o seu computador
+
+quero usar o git como um espaço de melhoria dos meus projetos, onde eu possa colaborar com a comunidade e com meus projetos pessoais

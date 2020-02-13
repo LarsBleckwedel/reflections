@@ -8,3 +8,30 @@ simplificando, ele permite a você visualizar os arquivos existentes no reposit�
 você seleciona um arquivo para receber um commit com a função "git add" seguido do arquivo que receberá a mudança
 é importante portanto se ter uma área de preparação caso você queira colocar dois arquivos para receber uma mudança ao mesmo tempo
 ou para voltar atrás na operação digitando "git reset"
+
+para fazer um commit de alteração lógica basta alterar o arquivo fonte, desta maneira se voce executar um "git diff" sem nada na frente ele mostrará
+que há um arquivo que foi alterado no programa
+portanto fazendo os passos de criar um commit voce salva essa alteração e adciona no histórico do programa
+
+criar "branchs" é um jeito muito prático quando se têm uma ideia em mente que você nunca textou e gostaria de tentar
+para fazer isso basta usar "git branch" e colocar na frente o nome que você quer dar para a ramificação so seu trabalho
+se você colocar apenas "git branch" o programa git mostrará todas as ramificações existentes naquele arquivo que você está trabalhando
+depois disso basta voce colocar "git checkout 'nome da ramificação'" que você estará trabalhando e fazendo alterações no seu trabalho somente naquela ramificação
+
+outra aplicação importante é a de poder ver o histórico dos seus commits em todas as ramificações simultâneamente
+para isso basta inserir "git log --graph --oneline" e na frente todas os commits de todas as diferentes ramificações que o trabalho tem
+o "--graph" serve para mostrar os commits de mais de uma ramificação, sendo a principal (master) ou não, e o "--oneline" deixa tudo em uma linha só
+fazendo isso você deve ter um parâmetro geral de todo o seu trabalho, apenas tome cuidado quando voce visita commits antigos
+criar uma nova ramificação em um commit antigo resultaria em uma nova ramificação sem as atualizações que existem em outros commits dentro da ramificação principal que voce esta puxando este commit antigo
+desta forma criar uma ramificação neste ponto implica perder processos de outros passos já feitos, ou querer começar de uma forma diferente em certo ponto
+
+para mesclar duas branchs em uma só usamos o comando "git merge" com os nomes das duas branchs na frente, sendo a ordem = a branch que voce está + a outra
+desta forma o programa git mescla as duas ramificações de forma celetiva, tendo em base o ultimo commit em comum e os últimos commits próprios de cada ramificação
+depois dessas alterações usando "git log" você terá um parâmetro mesclado das duas ramificações sendo os tempos dos commits como base de ordenação
+agora que o seu espaço está mesclado fica muito mais difícil achar o 'pai' de um commit, ou seja seu status anterior
+então para voce usar a função de comparação, o diff, você compara diretamente um commit com seu 'pai' usando "git show" seguido do commit
+para deletar branchs basta usar "git branch -d" seguido da ramificação, o '-d' seria um delet
+
+mesclagens manuais são muito boas de se fazer quando existem conflitos no meio do processo, essa é na verdade a única saída
+a forma como aparecem esses conflitos é bem intuitiva, sendo que ele mostra a versão original e a versão modificada nos outras 2 ramificações que voce vai juntar
+corrigindo esses conflitos e reproduzindo os mesmos passos de uma meclagem automática, "git add" no arquivo modificado depois "git commit" e "git merge (1ª branch) (2ª branch)", o que lhe resta no arquivo agora é apenas uma ramificação
